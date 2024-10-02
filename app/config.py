@@ -11,7 +11,9 @@ class Settings(BaseSettings):
     DATABASE_URL: str = ""
     KEY: str
     ALGORITM: str
-
+    MAIL_USERNAME: str
+    MAIL_PASSWORD: str
+    MAIL_PORT: int
 
     @model_validator(mode='after')
     def get_database_url(cls, values):
