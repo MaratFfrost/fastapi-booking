@@ -13,6 +13,7 @@ from app.rooms.models import Rooms
 from app.hotels.models import Hotels
 from app.users.models import Users
 from app.bookings.models import Bookings
+from app.admin.models import Admins
 
 
 sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
