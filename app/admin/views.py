@@ -2,6 +2,7 @@ from sqladmin import  ModelView
 
 from fastapi_cache import FastAPICache
 
+from app.bookings.models import Bookings
 from app.users.models import Users
 from app.hotels.models import Hotels
 from app.rooms.models import Rooms
@@ -33,8 +34,10 @@ class SuperUsers(ModelView, model=Admins):
   #column_details_exclude_list = [Admins.hashed_password]
   icon = "fa-duotone fa-solid fa-user-tie"
 
-  @staticmethod
-  def get_main_admin():
-    redis = FastAPICache.get_backend().redis
 
-    #admin_data_from_cache =  redis.hgetall(f"current_admin:{admin.name}")
+class UserBokings(ModelView, model=Bookings):
+  name="Booking"
+  icon="fa-solid fa-bed"
+  column_list = [Bookings.room_id, Bookings.user_id, Bookings.date_from, Bookings.date_to, Bookings.price]
+  can_delete = False
+  can_edit = False

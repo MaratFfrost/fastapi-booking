@@ -11,7 +11,7 @@ from fastapi_cache.decorator import cache
 
 from redis import asyncio as aioredis
 
-from app.admin.views import  SuperUsers, UserAdmin, HotelAdmin, RoomsAdmin
+from app.admin.views import  SuperUsers, UserAdmin, HotelAdmin, RoomsAdmin, UserBokings
 from app.admin.auth import authentication_backend
 from app.bookings.router import router as router_booking
 from app.users.router import router as router_users
@@ -41,3 +41,4 @@ admin.add_view(UserAdmin)
 admin.add_view(HotelAdmin)
 admin.add_view(RoomsAdmin)
 admin.add_view(SuperUsers)
+admin.add_view(UserBokings)
