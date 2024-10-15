@@ -30,7 +30,7 @@ class RoomsAdmin(ModelView, model=Rooms):
 
 class SuperUsers(ModelView, model=Admins):
   name ="SuperUser"
-  column_list = [Admins.name, Users.email]
+  column_list = [Admins.name, Admins.email]
   #column_details_exclude_list = [Admins.hashed_password]
   icon = "fa-duotone fa-solid fa-user-tie"
 
