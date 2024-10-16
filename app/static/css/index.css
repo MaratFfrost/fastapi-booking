@@ -1,0 +1,3711 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+@media only screen and (min-width: 1854px) {
+  .header {
+    display: flex;
+    position: sticky;
+    color: black;
+    background-color: white;
+    top: 0;
+    padding-bottom: 1%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    z-index: 9999;
+  }
+
+  .item {
+    font-size: 190%;
+    margin-top: 2%;
+    font-weight: bold;
+  }
+
+  .item:last-child {
+    margin-right: 10%;
+  }
+
+  .logo {
+    margin-top: 1.5%;
+    margin-right: 2%;
+    margin-left: 10%;
+  }
+
+  .info {
+    text-decoration: none;
+    color: black;
+  }
+
+  .content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .online_curse {
+    margin-left: 5%;
+    display: flex;
+    order: -1;
+    margin-right: 12%;
+  }
+
+  .size {
+    margin-top: 5%;
+    height: 200%;
+    width: 200%;
+  }
+
+  .text {
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 8%;
+    font-size: 200%;
+    text-align: center;
+  }
+
+  .roll {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    width: 300px;
+    height: auto;
+    font-size: 50px;
+  }
+
+  .addition {
+    color: grey;
+    font-size: 35%;
+  }
+
+  .attention {
+    color: rgb(54, 230, 54);
+    font-weight: bold;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/spring_action.svg');
+    background-size: cover;
+    margin-top: 10%;
+    width: 140%;
+    height: auto;
+  }
+
+  .action_text_style {
+    color: #fff;
+    font-size: 350%;
+    margin-top: 30%;
+    margin-left: 75px;
+  }
+
+  .offer_button {
+    border-radius: 19px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .offer_text {
+    font-size: 200%;
+    margin: 0 1% 0 1%;
+  }
+
+
+  .bestseller {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+
+  .bestseller_text {
+    font-size: 455%;
+    margin-left: 1.5%;
+  }
+
+  .bestseller_offers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+  }
+
+
+  .bestseller_offer {
+    border-radius: 25px;
+    margin: 1%;
+    border: none;
+    color: grey;
+    padding: 1%;
+    cursor: pointer;
+    width: 70%;
+    font-size: 250%;
+  }
+
+
+  .offer_text_style {
+    font-size: 60%;
+  }
+
+  .course {
+    color: #000;
+    font-weight: bold;
+    font-size: 105%;
+  }
+
+  .more_courses {
+    margin-top: 3%;
+    background-color: #000;
+    border-radius: 50px;
+    color: white;
+    width: 20%;
+    font-size: 200%;
+    padding: 1%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .advantade {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF0FF;
+    padding-left: 0.5%;
+    margin-bottom: 8%;
+  }
+
+  .advantade_info {
+    font-size: 320%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+  }
+
+  .advantades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+
+  .support {
+    border-top: 4px solid #00CC00;
+    font-size: 230%;
+    margin-left: 0.7%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .courses {
+    border-top: 4px solid #CC66CC;
+    font-size: 230%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1%;
+  }
+
+  .materials {
+    border-top: 4px solid #00CCFF;
+    font-size: 230%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .pace {
+    border-top: 4px solid #FF9933;
+    font-size: 230%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .support_plus {
+    font-size: 480%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1.5%;
+    color: #00CC00;
+  }
+
+  .courses_plus {
+    font-size: 480%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1.5%;
+    color: #CC66CC;
+  }
+
+  .materials_plus {
+    font-size: 480%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1.5%;
+    color: #00CCFF;
+  }
+
+  .popular_courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular_courses_text {
+    font-size: 455%;
+    margin-left: 6%;
+  }
+
+  .famous_courses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .famous_course {
+    display: flex;
+    border-radius: 35px;
+    margin: 1% 6.5% 0% 6.5%;
+    border: none;
+    background-color: white;
+    padding: 1% 2% 1% 2%;
+    cursor: pointer;
+    font-size: 155%;
+    width: 25%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .famous_courses_text {
+    color: grey;
+    font-size: 60%;
+    margin-top: 2.5%;
+  }
+
+  .famous_courses_img {
+    text-align: right;
+    margin-left: 5%;
+    margin-top: 6.2%;
+  }
+
+  .partners_stepics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+  }
+
+  .explanatory_text {
+    margin: 0% 0% 4% 6%;
+    font-weight: bolder;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 3%;
+  }
+
+  .partners_photo {
+    margin: 2.3% 3% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo1 {
+    width: 20%;
+    height: 15%;
+    margin-top: 1.4%;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo2 {
+    width: 20%;
+    height: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo3 {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .partners_photo4 {
+    margin: 1.5% 4% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo5 {
+    width: 15%;
+    height: 10%;
+    margin-top: 1.4%;
+    margin-left: 1.7%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responses_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    margin: 0.3% 6.5% 1% 5.5%;
+    border: none;
+    background-color: white;
+    padding: 1% 2% 1% 2%;
+    font-size: 155%;
+    width: 25%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  .client_photo {
+    text-align: left;
+    width: 30%;
+    height: 85%;
+  }
+
+  .client_name {
+    text-align: right;
+    margin-left: 20%;
+    padding-top: 1%;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    margin-top: 10%;
+    padding-bottom: 4%;
+    margin-bottom: 0%;
+  }
+
+  .logo_footer {
+    margin: 3% 0% 3% 3%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+
+  li {
+    margin-bottom: 15%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .text_style_info {
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(2),
+  .menu-btn.active span:nth-of-type(3) {
+    background-color: white;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    padding: 1%;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .menu.active li {
+    margin-top: 45%;
+    margin-left: 2%;
+  }
+
+  .menu_text {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1853px) {
+  .header {
+    display: flex;
+    position: sticky;
+    color: black;
+    background-color: white;
+    top: 0;
+    padding-bottom: 1%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    z-index: 9999;
+  }
+
+  .item {
+    font-size: 190%;
+    margin-top: 2%;
+    font-weight: bold;
+  }
+
+  .item:last-child {
+    margin-right: 10%;
+  }
+
+  .size {
+    margin-top: 4%;
+    width: 80%;
+    height: 80%;
+  }
+
+  .logo {
+    margin-top: 1.5%;
+    margin-right: 2%;
+    margin-left: 0.5%;
+  }
+
+  .info {
+    text-decoration: none;
+    color: black;
+  }
+
+  .content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .online_curse {
+    margin-left: 5%;
+    display: flex;
+    order: -1;
+    margin-right: 12%;
+  }
+
+  .text {
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 8%;
+    font-size: 150%;
+    text-align: center;
+  }
+
+  .roll {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    width: 300px;
+    height: auto;
+    font-size: 50px;
+  }
+
+  .addition {
+    color: grey;
+    font-size: 35%;
+  }
+
+  .attention {
+    color: rgb(54, 230, 54);
+    font-weight: bold;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/spring_action.svg');
+    background-size: cover;
+    margin-top: 10%;
+    width: 140%;
+    height: auto;
+  }
+
+  .action_text_style {
+    color: #fff;
+    font-size: 350%;
+    margin-top: 30%;
+    margin-left: 75px;
+  }
+
+  .offer_button {
+    border-radius: 19px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .offer_text {
+    font-size: 125%;
+  }
+
+  .offer_button:hover {
+    border: 3px solid black;
+  }
+
+  .bestseller {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+
+  .bestseller_text {
+    font-size: 455%;
+    margin-left: 1.5%;
+  }
+
+  .bestseller_offers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+  }
+
+
+  .bestseller_offer {
+    border-radius: 25px;
+    margin: 1%;
+    border: none;
+    color: grey;
+    padding: 1%;
+    cursor: pointer;
+    width: 70%;
+    font-size: 250%;
+  }
+
+
+  .offer_text_style {
+    font-size: 60%;
+  }
+
+  .course {
+    color: #000;
+    font-weight: bold;
+    font-size: 105%;
+  }
+
+  .more_courses {
+    margin-top: 3%;
+    background-color: #000;
+    border-radius: 50px;
+    color: white;
+    width: 20%;
+    font-size: 200%;
+    padding: 1%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .advantade {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF0FF;
+    padding-left: 0.5%;
+    margin-bottom: 8%;
+  }
+
+  .advantade_info {
+    font-size: 320%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+  }
+
+  .advantades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+
+  .support {
+    border-top: 4px solid #00CC00;
+    font-size: 230%;
+    margin-left: 0.7%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .courses {
+    border-top: 4px solid #CC66CC;
+    font-size: 230%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1%;
+  }
+
+  .materials {
+    border-top: 4px solid #00CCFF;
+    font-size: 230%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .pace {
+    border-top: 4px solid #FF9933;
+    font-size: 230%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .support_plus {
+    font-size: 480%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1.5%;
+    color: #00CC00;
+  }
+
+  .courses_plus {
+    font-size: 480%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1.5%;
+    color: #CC66CC;
+  }
+
+  .materials_plus {
+    font-size: 480%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1.5%;
+    color: #00CCFF;
+  }
+
+  .popular_courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular_courses_text {
+    font-size: 455%;
+    margin-left: 6%;
+  }
+
+  .famous_courses {
+    display: flex;
+    flex-direction: row;
+    width: 110%;
+    height: 110%;
+  }
+
+  .famous_course {
+    display: flex;
+    border-radius: 35px;
+    margin: 1% 1% 0% 4%;
+    border: none;
+    background-color: white;
+    padding: 1% 2% 1% 2%;
+    cursor: pointer;
+    font-size: 155%;
+    width: 25%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .famous_courses_text {
+    color: grey;
+    font-size: 60%;
+    margin-top: 2.5%;
+  }
+
+  .famous_courses_img {
+    text-align: right;
+    margin-left: 5%;
+    margin-top: 6.2%;
+  }
+
+  .partners_stepics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+  }
+
+  .explanatory_text {
+    margin: 0% 0% 4% 6%;
+    font-weight: bolder;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 3%;
+  }
+
+  .partners_photo {
+    margin: 2.3% 3% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo1 {
+    width: 20%;
+    height: 15%;
+    margin-top: 1.4%;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo2 {
+    width: 20%;
+    height: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo3 {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .partners_photo4 {
+    margin: 1.5% 4% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo5 {
+    width: 15%;
+    height: 10%;
+    margin-top: 1.4%;
+    margin-left: 1.7%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responses_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    margin: 0.3% 6.5% 1% 5.5%;
+    border: none;
+    background-color: white;
+    padding: 1% 2% 0% 2%;
+    font-size: 155%;
+    width: 600px;
+    height: 500px;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .list {
+    display: flex;
+    margin-top: 3%;
+    align-items: center;
+  }
+
+  .client_photo {
+    text-align: left;
+    width: 40%;
+    height: 55%;
+  }
+
+  .client_name {
+    text-align: right;
+    margin-left: 20%;
+    margin-right: 3%;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    margin-top: 10%;
+    padding-bottom: 4%;
+    margin-bottom: 0%;
+  }
+
+  .logo_footer {
+    margin: 3% 0% 3% 3%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+
+  li {
+    margin-bottom: 15%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .text_style_info {
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(2),
+  .menu-btn.active span:nth-of-type(3) {
+    background-color: white;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    padding: 1%;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .menu.active li {
+    margin-top: 45%;
+    margin-left: 2%;
+  }
+
+  .menu_text {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1399px) {
+  .header {
+    display: flex;
+    position: sticky;
+    color: black;
+    z-index: 9999;
+    background-color: white;
+    top: 0;
+    padding-bottom: 1%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .item {
+    font-size: 190%;
+    margin-top: 2%;
+    font-weight: bold;
+  }
+
+  .item:last-child {
+    margin-right: 10%;
+  }
+
+  .logo {
+    margin-top: 1.5%;
+    margin-right: 2%;
+    margin-left: 0.5%;
+  }
+
+  .info {
+    text-decoration: none;
+    color: black;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  .content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .online_curse {
+    margin-left: 5%;
+    display: flex;
+    order: -1;
+    margin-right: 12%;
+  }
+
+  .size {
+    margin-top: 5%;
+    width: 50%;
+    height: 50%;
+  }
+
+  .text {
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 8%;
+    font-size: 110%;
+    text-align: center;
+  }
+
+  .roll {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    width: 60%;
+    height: 15%;
+    font-size: 130%;
+  }
+
+  .addition {
+    color: grey;
+    font-size: 45%;
+  }
+
+  .attention {
+    color: rgb(54, 230, 54);
+    font-weight: bold;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/spring_action.svg');
+    background-size: cover;
+    margin-top: 10%;
+    width: 140%;
+    height: auto;
+  }
+
+  .action_text_style {
+    color: #fff;
+    font-size: 350%;
+    margin-top: 30%;
+    margin-left: 45px;
+  }
+
+  .offer_button {
+    border-radius: 19px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    width: 220px;
+    height: 70px;
+    opacity: 0.7;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .offer_button:hover {
+    border: 3px solid black;
+  }
+
+  .bestseller {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+
+  .bestseller_text {
+    font-size: 455%;
+    margin-left: 1.5%;
+  }
+
+  .bestseller_offers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+  }
+
+
+  .bestseller_offer {
+    border-radius: 25px;
+    margin: 1%;
+    border: none;
+    color: grey;
+    padding: 1%;
+    cursor: pointer;
+    width: 70%;
+    font-size: 250%;
+  }
+
+
+  .offer_text_style {
+    font-size: 55%;
+  }
+
+  .course {
+    color: #000;
+    font-weight: bold;
+    font-size: 75%;
+  }
+
+  .more_courses {
+    margin-top: 3%;
+    background-color: #000;
+    border-radius: 50px;
+    color: white;
+    width: 20%;
+    font-size: 170%;
+    padding: 1%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .advantade {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF0FF;
+    padding-left: 0.5%;
+    margin-bottom: 8%;
+  }
+
+  .advantade_info {
+    font-size: 270%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+  }
+
+  .advantades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+
+  .support {
+    border-top: 4px solid #00CC00;
+    font-size: 190%;
+    margin-left: 0.7%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .courses {
+    border-top: 4px solid #CC66CC;
+    font-size: 190%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1%;
+  }
+
+  .materials {
+    border-top: 4px solid #00CCFF;
+    font-size: 190%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .pace {
+    border-top: 4px solid #FF9933;
+    font-size: 190%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .support_plus {
+    font-size: 430%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CC00;
+  }
+
+  .courses_plus {
+    font-size: 430%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #CC66CC;
+  }
+
+  .materials_plus {
+    font-size: 430%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CCFF;
+  }
+
+  .popular_courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular_courses_text {
+    font-size: 455%;
+    margin-left: 6%;
+  }
+
+  .famous_courses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .famous_course {
+    display: flex;
+    border-radius: 35px;
+    margin: 1% 6.5% 0% 6.5%;
+    border: none;
+    background-color: white;
+    padding: 2% 2% 1% 2%;
+    cursor: pointer;
+    font-size: 155%;
+    width: 35%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .famous_courses_text {
+    color: grey;
+    font-size: 60%;
+    margin-top: 2.5%;
+  }
+
+  .famous_course_name {
+    font-size: 75%;
+    padding-right: 5%;
+  }
+
+  .famous_courses_img {
+    text-align: right;
+    padding-top: 8%;
+    padding-right: 8%;
+    width: 50%;
+    height: 50%;
+    margin-left: 2%;
+    margin-top: 6.2%;
+  }
+
+  .partners_stepics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+  }
+
+  .explanatory_text {
+    margin: 0% 0% 4% 6%;
+    font-weight: bolder;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 3%;
+  }
+
+  .partners_photo {
+    margin: 2.3% 3% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo1 {
+    width: 20%;
+    height: 15%;
+    margin-top: 1.4%;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo2 {
+    width: 20%;
+    height: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo3 {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .partners_photo4 {
+    margin: 1.5% 4% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo5 {
+    width: 15%;
+    height: 10%;
+    margin-top: 1.4%;
+    margin-left: 1.7%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responses_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    margin: 0.3% 1% 1% 3.5%;
+    border: none;
+    background-color: white;
+    padding: 1% 2% 1% 2%;
+    font-size: 135%;
+    width: 25%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  .client_photo {
+    text-align: left;
+
+  }
+
+  .client_name {
+    text-align: right;
+    margin-left: 20%;
+    padding-top: 1%;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    margin-top: 10%;
+    padding-bottom: 4%;
+    margin-bottom: 0%;
+  }
+
+  .logo_footer {
+    margin: 3% 0% 3% 3%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+
+  li {
+    margin-bottom: 15%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-top: 40%;
+    padding-left: 0%;
+    margin: 0;
+  }
+
+  .text_style_info {
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(2),
+  .menu-btn.active span:nth-of-type(3) {
+    background-color: white;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    padding: 1%;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .menu.active li {
+    margin-top: 45%;
+    margin-left: 2%;
+  }
+
+  .menu_text {
+    margin-top: 5%;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 792px) and (max-width: 1099px) {
+  .header {
+    display: flex;
+    position: sticky;
+    color: black;
+    z-index: 9999;
+    background-color: white;
+    top: 0;
+    padding-bottom: 1%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .item {
+    font-size: 140%;
+    margin-top: 2%;
+  }
+
+  .item:last-child {
+    margin-right: 10%;
+  }
+
+  .logo {
+    margin-top: 1.5%;
+    margin-right: 2%;
+    margin-left: 0.5%;
+  }
+
+  .info {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  .content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .online_curse {
+    margin-left: 5%;
+    display: flex;
+    order: -1;
+    margin-right: 12%;
+  }
+
+  .size {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .text {
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 8%;
+    font-size: 90%;
+    text-align: center;
+  }
+
+  .roll {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    width: 60%;
+    height: 15%;
+    font-size: 130%;
+  }
+
+  .addition {
+    color: grey;
+    font-size: 45%;
+  }
+
+  .attention {
+    color: rgb(54, 230, 54);
+    font-weight: bold;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/spring_action.svg');
+    background-size: cover;
+    margin-top: 10%;
+    width: 140%;
+    height: auto;
+  }
+
+  .action_text_style {
+    color: #fff;
+    font-size: 250%;
+    margin-top: 30%;
+    margin-left: 45px;
+  }
+
+  .offer_button {
+    border-radius: 19px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .bestseller {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+
+  .bestseller_text {
+    font-size: 350%;
+    margin-left: 1.5%;
+  }
+
+  .bestseller_offers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+  }
+
+
+  .bestseller_offer {
+    border-radius: 25px;
+    margin: 1%;
+    border: none;
+    color: grey;
+    padding: 1%;
+    cursor: pointer;
+    width: 30%;
+    font-size: 230%;
+  }
+
+
+  .offer_text_style {
+    font-size: 45%;
+  }
+
+  .course {
+    color: #000;
+    font-weight: bold;
+    font-size: 75%;
+  }
+
+  .more_courses {
+    margin-top: 3%;
+    background-color: #000;
+    border-radius: 50px;
+    color: white;
+    width: 20%;
+    font-size: 110%;
+    padding: 1%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .advantade {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF0FF;
+    padding-left: 0.5%;
+    margin-bottom: 8%;
+  }
+
+  .advantade_info {
+    font-size: 200%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+  }
+
+  .advantades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+
+  .support {
+    border-top: 4px solid #00CC00;
+    font-size: 140%;
+    margin-left: 0.7%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .courses {
+    border-top: 4px solid #CC66CC;
+    font-size: 140%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1%;
+  }
+
+  .materials {
+    border-top: 4px solid #00CCFF;
+    font-size: 140%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .pace {
+    border-top: 4px solid #FF9933;
+    font-size: 140%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .support_plus {
+    font-size: 300%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CC00;
+  }
+
+  .courses_plus {
+    font-size: 300%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #CC66CC;
+  }
+
+  .materials_plus {
+    font-size: 300%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CCFF;
+  }
+
+  .popular_courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular_courses_text {
+    font-size: 350%;
+    margin-left: 6%;
+  }
+
+  .famous_courses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .famous_course {
+    display: flex;
+    border-radius: 35px;
+    margin: 1% 6.5% 0% 6.5%;
+    border: none;
+    background-color: white;
+    padding: 2% 2% 1% 2%;
+    cursor: pointer;
+    font-size: 135%;
+    width: 35%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .famous_courses_text {
+    color: grey;
+    font-size: 50%;
+    margin-top: 2.5%;
+    margin-right: 1%;
+  }
+
+  .famous_course_name {
+    font-size: 55%;
+    padding-right: 5%;
+  }
+
+  .famous_courses_img {
+    text-align: right;
+    padding-top: 8%;
+    padding-right: 8%;
+    width: 55%;
+    height: 55%;
+    margin-left: 10%;
+    margin-top: 6.2%;
+  }
+
+  .partners_stepics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+  }
+
+  .explanatory_text {
+    margin: 0% 0% 4% 6%;
+    font-weight: bolder;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 3%;
+  }
+
+  .partners_photo {
+    margin: 2.3% 3% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo1 {
+    width: 20%;
+    height: 15%;
+    margin-top: 1.4%;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo2 {
+    width: 20%;
+    height: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo3 {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .partners_photo4 {
+    margin: 1.5% 4% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo5 {
+    width: 15%;
+    height: 10%;
+    margin-top: 1.4%;
+    margin-left: 1.7%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responses_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    margin: 0.3% 1% 1% 3.5%;
+    border: none;
+    background-color: white;
+    padding: 1% 2% 1% 2%;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  .client_photo {
+    text-align: left;
+
+  }
+
+  .client_name {
+    text-align: right;
+    margin-left: 10%;
+    padding-top: 1%;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    margin-top: 10%;
+    padding-bottom: 4%;
+    margin-bottom: 0%;
+  }
+
+  .logo_footer {
+    margin: 3% 0% 3% 3%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+
+  li {
+    margin-bottom: 15%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 40% 0%;
+    margin: 0;
+  }
+
+  .text_style_info {
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(2),
+  .menu-btn.active span:nth-of-type(3) {
+    background-color: white;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    padding: 1%;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .menu.active li {
+    margin-top: 45%;
+    margin-left: 2%;
+  }
+
+  .menu_text {
+    margin-top: 5%;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width:650px) and (max-width:791px) {
+  .header {
+    display: flex;
+    position: sticky;
+    color: black;
+    z-index: 9999;
+    background-color: white;
+    top: 0;
+    padding-bottom: 1%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .item {
+    margin-left: 2.5%;
+    font-size: 130%;
+    margin-top: 3%;
+  }
+
+  .item:last-child {
+    margin-right: 10%;
+  }
+
+  .logo {
+    margin-top: 1.5%;
+    margin-right: 2%;
+    margin-left: 0.5%;
+  }
+
+  .logotip {
+    width: 80%;
+    height: 50%;
+    margin: 7% 5% 5% 15%;
+  }
+
+  .info {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  .content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .online_curse {
+    margin-left: 5%;
+    display: flex;
+    order: -1;
+    margin-right: 12%;
+  }
+
+  .size {
+    margin-top: 5%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .text {
+    margin-top: 7%;
+    margin-left: 8%;
+    margin-right: 4%;
+    font-size: 70%;
+    text-align: center;
+  }
+
+  .roll {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    width: 60%;
+    height: 15%;
+    font-size: 130%;
+  }
+
+  .addition {
+    color: grey;
+    font-size: 35%;
+  }
+
+  .attention {
+    color: rgb(54, 230, 54);
+    font-weight: bold;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/spring_action.svg');
+    background-size: cover;
+    margin-top: 10%;
+    width: 140%;
+    height: auto;
+  }
+
+  .action_text_style {
+    color: #fff;
+    font-size: 165%;
+    margin-top: 30%;
+    margin-left: 45px;
+  }
+
+  .offer_text {
+    font-size: 60%;
+  }
+
+  .offer_button {
+    border-radius: 19px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+
+  .bestseller {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+
+  .bestseller_text {
+    font-size: 300%;
+    margin-left: 1.5%;
+  }
+
+  .bestseller_offers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+  }
+
+
+  .bestseller_offer {
+    border-radius: 25px;
+    margin: 1%;
+    border: none;
+    color: grey;
+    padding: 1%;
+    cursor: pointer;
+    width: 30%;
+    font-size: 190%;
+  }
+
+  .offer_text_style {
+    font-size: 40%;
+  }
+
+
+  .course {
+    color: #000;
+    font-weight: bold;
+    font-size: 75%;
+  }
+
+  .more_courses {
+    margin-top: 3%;
+    background-color: #000;
+    border-radius: 50px;
+    color: white;
+    width: 20%;
+    font-size: 80%;
+    padding: 1%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .advantade {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF0FF;
+    padding-left: 0.5%;
+    margin-bottom: 8%;
+  }
+
+  .advantade_info {
+    font-size: 140%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+  }
+
+  .advantades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+
+  .support {
+    border-top: 4px solid #00CC00;
+    font-size: 100%;
+    margin-left: 0.7%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .courses {
+    border-top: 4px solid #CC66CC;
+    font-size: 100%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1%;
+  }
+
+  .materials {
+    border-top: 4px solid #00CCFF;
+    font-size: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .pace {
+    border-top: 4px solid #FF9933;
+    font-size: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .support_plus {
+    font-size: 260%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CC00;
+  }
+
+  .courses_plus {
+    font-size: 260%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #CC66CC;
+  }
+
+  .materials_plus {
+    font-size: 260%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CCFF;
+  }
+
+  .popular_courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular_courses_text {
+    font-size: 300%;
+    margin-left: 6%;
+  }
+
+  .famous_courses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .famous_course {
+    display: flex;
+    border-radius: 35px;
+    margin: 1% 6.5% 0% 6.5%;
+    border: none;
+    background-color: white;
+    padding: 2% 2% 1% 2%;
+    cursor: pointer;
+    font-size: 105%;
+    width: 35%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .famous_courses_text {
+    color: grey;
+    font-size: 55%;
+    margin-top: 2.5%;
+    margin-right: 1%;
+  }
+
+  .famous_course_name {
+    font-size: 55%;
+    padding-right: 5%;
+  }
+
+  .famous_courses_img {
+    text-align: right;
+    padding-top: 8%;
+    padding-right: 8%;
+    width: 55%;
+    height: 55%;
+    margin-left: 10%;
+    margin-top: 6.2%;
+  }
+
+  .partners_stepics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+  }
+
+  .explanatory_text {
+    margin: 0% 0% 4% 6%;
+    font-weight: bolder;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 3%;
+  }
+
+  .partners_photo {
+    margin: 2.3% 3% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo1 {
+    width: 20%;
+    height: 15%;
+    margin-top: 1.4%;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo2 {
+    width: 20%;
+    height: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo3 {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .partners_photo4 {
+    margin: 1.5% 4% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo5 {
+    width: 15%;
+    height: 10%;
+    margin-top: 1.4%;
+    margin-left: 1.7%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responses_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    margin: 0.3% 1% 1% 3.5%;
+    border: none;
+    background-color: white;
+    padding: 1% 2% 1% 2%;
+    font-size: 90%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  .client_photo {
+    text-align: left;
+
+  }
+
+  .client_name {
+    text-align: right;
+    margin-left: 10%;
+    padding-top: 1%;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    margin-top: 10%;
+    padding-bottom: 4%;
+    margin-bottom: 0%;
+  }
+
+  .logo_footer {
+    width: 30%;
+    height: 50%;
+    margin: 3% 0% 3% 3%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+
+  li {
+    margin-bottom: 15%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 45% 0;
+  }
+
+  .text_style_info {
+    color: #fff;
+    text-decoration: none;
+    margin: 2%;
+  }
+
+  .conections {
+    padding-top: 3%;
+  }
+
+  .contact {
+    font-size: 70%;
+  }
+
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(2),
+  .menu-btn.active span:nth-of-type(3) {
+    background-color: white;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 13%;
+    height: 100%;
+    padding: 1%;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .menu.active li {
+    margin-top: 45%;
+    margin-left: 2%;
+  }
+
+  .menu_text {
+
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width:375px) and (max-width:649px) {
+  .header {
+    display: flex;
+    position: sticky;
+    color: black;
+    z-index: 9999;
+    background-color: white;
+    top: 0;
+    padding-bottom: 1%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .item {
+    margin-left: 2.5%;
+    font-size: 70%;
+    margin-top: 5%;
+    visibility: hidden
+  }
+
+  .item:last-child {
+    margin-right: 10%;
+  }
+
+  .logo {
+    margin-top: 1.5%;
+    margin-right: 2%;
+    margin-left: 0.5%;
+  }
+
+  .logotip {
+    width: 80%;
+    height: 50%;
+    margin: 9% 5% 5% 15%;
+  }
+
+  .info {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  .content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .online_curse {
+    margin-left: 5%;
+    display: flex;
+    order: -1;
+    margin-right: 12%;
+  }
+
+  .size {
+    margin-top: 5%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .text {
+    margin-top: 7%;
+    margin-left: 8%;
+    margin-right: 4%;
+    font-size: 50%;
+    text-align: center;
+  }
+
+  .roll {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    width: 60%;
+    height: 15%;
+    font-size: 130%;
+  }
+
+  .addition {
+    color: grey;
+    font-size: 35%;
+  }
+
+  .attention {
+    color: rgb(54, 230, 54);
+    font-weight: bold;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/spring_action.svg');
+    background-size: cover;
+    margin-top: 10%;
+    width: 140%;
+    height: auto;
+  }
+
+  .action_text_style {
+    color: #fff;
+    font-size: 110%;
+    margin-top: 30%;
+    margin-left: 20px;
+  }
+
+  .offer_text {
+    font-size: 30%;
+  }
+
+  .offer_button {
+    border-radius: 19px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+
+  .bestseller {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+
+  .bestseller_text {
+    font-size: 170%;
+    margin-left: 1.5%;
+  }
+
+  .bestseller_offers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+  }
+
+
+  .bestseller_offer {
+    border-radius: 15px;
+    margin: 1%;
+    border: none;
+    color: grey;
+    padding: 1%;
+    cursor: pointer;
+    width: 30%;
+    font-size: 80%;
+  }
+
+  .offer_text_style {
+    font-size: 45%;
+  }
+
+
+  .course {
+    color: #000;
+    font-weight: bold;
+    font-size: 75%;
+  }
+
+  .more_courses {
+    margin-top: 3%;
+    background-color: #000;
+    border-radius: 50px;
+    color: white;
+    width: 20%;
+    font-size: 50%;
+    padding: 1%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .advantade {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF0FF;
+    padding-left: 0.5%;
+    margin-bottom: 8%;
+  }
+
+  .advantade_info {
+    font-size: 90%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+  }
+
+  .advantades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+
+  .support {
+    border-top: 4px solid #00CC00;
+    font-size: 65%;
+    margin-left: 0.7%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .courses {
+    border-top: 4px solid #CC66CC;
+    font-size: 65%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1%;
+  }
+
+  .materials {
+    border-top: 4px solid #00CCFF;
+    font-size: 65%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .pace {
+    border-top: 4px solid #FF9933;
+    font-size: 65%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .support_plus {
+    font-size: 170%;
+    margin-left: 0.1%;
+    margin-right: 0.2%;
+    padding-top: 3%;
+    color: #00CC00;
+  }
+
+  .courses_plus {
+    font-size: 170%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #CC66CC;
+  }
+
+  .materials_plus {
+    font-size: 170%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CCFF;
+  }
+
+  .popular_courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular_courses_text {
+    font-size: 180%;
+    margin-left: 6%;
+  }
+
+  .famous_courses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .famous_course {
+    display: flex;
+    border-radius: 15px;
+    margin: 1% 6.5% 0% 6.5%;
+    border: none;
+    background-color: white;
+    padding: 2% 2% 1% 2%;
+    cursor: pointer;
+    font-size: 105%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .famous_courses_text {
+    color: grey;
+    font-size: 30%;
+    margin-top: 2.5%;
+    margin-right: 1%;
+  }
+
+  .famous_course_name {
+    font-size: 35%;
+    padding-right: 5%;
+  }
+
+  .famous_courses_img {
+    text-align: right;
+    padding-top: 8%;
+    padding-right: 8%;
+    width: 50%;
+    height: 50%;
+    margin-left: 4%;
+    margin-top: 6.2%;
+  }
+
+  .partners_stepics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+  }
+
+  .explanatory_text {
+    font-size: 90%;
+    margin: 0% 0% 4% 6%;
+    font-weight: bolder;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 3%;
+  }
+
+  .partners_photo {
+    margin: 2.3% 3% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo1 {
+    width: 20%;
+    height: 15%;
+    margin-top: 1.4%;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo2 {
+    width: 20%;
+    height: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo3 {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .partners_photo4 {
+    margin: 1.5% 4% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo5 {
+    width: 15%;
+    height: 10%;
+    margin-top: 1.4%;
+    margin-left: 1.7%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responses_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 0.3% 1% 1% 3.5%;
+    border: none;
+    background-color: white;
+    padding: 3% 2% 1% 2%;
+    font-size: 60%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .contact {
+    margin: 0% 3% 0% 3%;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  .client_photo {
+    text-align: left;
+    width: 40%;
+  }
+
+  .client_name {
+    text-align: right;
+    margin-left: 10%;
+    font-size: 60%;
+    padding-top: 1%;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    margin-top: 10%;
+    padding-bottom: 4%;
+    margin-bottom: 0%;
+  }
+
+  .logo_footer {
+    width: 30%;
+    height: 50%;
+    margin: 3% 0% 3% 3%;
+  }
+
+  .conection {
+    font-size: 100%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  li {
+    margin-bottom: 15%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 45% 0;
+  }
+
+  .text_style_info {
+    color: #fff;
+    text-decoration: none;
+    margin: 2%;
+  }
+
+  .conections {
+    padding-top: 3%;
+  }
+
+  .contact {
+    font-size: 70%;
+  }
+
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(2),
+  .menu-btn.active span:nth-of-type(3) {
+    background-color: white;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 17%;
+    height: 100%;
+    padding: 1%;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .menu.active li {
+    margin-top: 45%;
+    margin-left: 2%;
+  }
+
+  .menu_text {
+    color: white;
+    text-decoration: none;
+    font-size: 70%;
+  }
+}
+
+@media only screen and (max-width:374px) {
+  .header {
+    display: flex;
+    position: sticky;
+    color: black;
+    z-index: 9999;
+    background-color: white;
+    top: 0;
+    padding-bottom: 1%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .item {
+    margin-left: 2.5%;
+    font-size: 70%;
+    margin-top: 5%;
+    visibility: hidden
+  }
+
+  .item:last-child {
+    margin-right: 10%;
+  }
+
+  .logo {
+    margin-top: 5%;
+    margin-right: 4%;
+    margin-left: 0.5%;
+  }
+
+  .logotip {
+    width: 80%;
+    height: 50%;
+    margin: 12% 4% 4% 15%;
+  }
+
+  .info {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  .content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .online_curse {
+    margin-left: 5%;
+    display: flex;
+    order: -1;
+    margin-right: 12%;
+  }
+
+  .size {
+    margin-top: 5%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .text {
+    margin-top: 7%;
+    margin-left: 8%;
+    margin-right: 4%;
+    font-size: 30%;
+    text-align: center;
+  }
+
+  .roll {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    width: 60%;
+    height: 15%;
+    font-size: 130%;
+  }
+
+  .addition {
+    color: grey;
+    font-size: 20%;
+  }
+
+  .attention {
+    color: rgb(54, 230, 54);
+    font-weight: bold;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/spring_action.svg');
+    background-size: cover;
+    margin-top: 10%;
+    width: 140%;
+    height: auto;
+  }
+
+  .action_text_style {
+    color: #fff;
+    font-size: 100%;
+    margin-top: 30%;
+    margin-left: 20px;
+  }
+
+  .offer_text {
+    font-size: 30%;
+  }
+
+  .offer_button {
+    border-radius: 19px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+
+  .bestseller {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+
+  .bestseller_text {
+    font-size: 140%;
+    margin-left: 1.5%;
+  }
+
+  .bestseller_offers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+  }
+
+
+  .bestseller_offer {
+    border-radius: 15px;
+    margin: 1%;
+    border: none;
+    color: grey;
+    padding: 1%;
+    cursor: pointer;
+    width: 30%;
+    font-size: 80%;
+  }
+
+  .offer_text_style {
+    font-size: 45%;
+  }
+
+
+  .course {
+    color: #000;
+    font-weight: bold;
+    font-size: 75%;
+  }
+
+  .more_courses {
+    margin-top: 3%;
+    background-color: #000;
+    border-radius: 50px;
+    color: white;
+    width: 20%;
+    font-size: 40%;
+    padding: 1%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .advantade {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF0FF;
+    padding-left: 0.5%;
+    margin-bottom: 8%;
+  }
+
+  .advantade_info {
+    font-size: 70%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+  }
+
+  .advantades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+
+  .support {
+    border-top: 4px solid #00CC00;
+    font-size: 45%;
+    margin-left: 0.7%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .courses {
+    border-top: 4px solid #CC66CC;
+    font-size: 45%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 1%;
+  }
+
+  .materials {
+    border-top: 4px solid #00CCFF;
+    font-size: 45%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .pace {
+    border-top: 4px solid #FF9933;
+    font-size: 45%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
+  }
+
+  .support_plus {
+    font-size: 140%;
+    margin-left: 0.1%;
+    margin-right: 0.2%;
+    padding-top: 3%;
+    color: #00CC00;
+  }
+
+  .courses_plus {
+    font-size: 140%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #CC66CC;
+  }
+
+  .materials_plus {
+    font-size: 140%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    padding-top: 3%;
+    color: #00CCFF;
+  }
+
+  .popular_courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular_courses_text {
+    font-size: 180%;
+    margin-left: 6%;
+  }
+
+  .famous_courses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .famous_course {
+    display: flex;
+    border-radius: 10px;
+    margin: 1% 6.5% 0% 6.5%;
+    border: none;
+    background-color: white;
+    padding: 2% 4% 1% 2%;
+    cursor: pointer;
+    font-size: 115%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .famous_courses_text {
+    color: grey;
+    font-size: 30%;
+    margin-top: 2.5%;
+    margin-right: 1%;
+  }
+
+  .famous_course_name {
+    font-size: 20%;
+    padding-right: 5%;
+  }
+
+  .famous_courses_img {
+    text-align: right;
+    padding-top: 8%;
+    padding-right: 8%;
+    width: 50%;
+    height: 50%;
+    margin-left: 4%;
+    margin-top: 6.2%;
+  }
+
+  .partners_stepics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+  }
+
+  .explanatory_text {
+    font-size: 70%;
+    margin: 0% 0% 4% 6%;
+    font-weight: bolder;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 3%;
+  }
+
+  .partners_photo {
+    margin: 2.3% 3% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo1 {
+    width: 20%;
+    height: 15%;
+    margin-top: 1.4%;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo2 {
+    width: 20%;
+    height: 15%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .partners_photo3 {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .partners_photo4 {
+    margin: 1.5% 4% 0% 0%;
+    width: 25%;
+    height: 20%;
+  }
+
+  .partners_photo5 {
+    width: 15%;
+    height: 10%;
+    margin-top: 1.4%;
+    margin-left: 1.7%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responses {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responses_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 0.3% 1% 1% 3.5%;
+    border: none;
+    background-color: white;
+    padding: 3% 2% 1% 2%;
+    font-size: 60%;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .contact {
+    margin: 0% 3% 0% 3%;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  .client_photo {
+    text-align: left;
+    width: 40%;
+  }
+
+  .client_name {
+    text-align: right;
+    margin-left: 10%;
+    font-size: 60%;
+    padding-top: 1%;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    margin-top: 10%;
+    padding-bottom: 4%;
+    margin-bottom: 0%;
+  }
+
+  .logo_footer {
+    width: 30%;
+    height: 50%;
+    margin: 3% 0% 3% 3%;
+  }
+
+  .conection {
+    font-size: 100%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  li {
+    margin-bottom: 15%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 45% 0;
+  }
+
+  .text_style_info {
+    color: #fff;
+    text-decoration: none;
+    margin: 2%;
+  }
+
+  .conections {
+    padding-top: 3%;
+  }
+
+  .contact {
+    font-size: 60%;
+  }
+
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(2),
+  .menu-btn.active span:nth-of-type(3) {
+    background-color: white;
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 17%;
+    height: 100%;
+    padding: 1%;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .menu.active li {
+    margin-top: 45%;
+    margin-left: 2%;
+  }
+
+  .menu_text {
+    color: white;
+    text-decoration: none;
+    font-size: 70%;
+  }
+}

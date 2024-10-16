@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+  <div class="conteiner">
+    <a id="main"></a>
+    <div class="header">
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a class="menu_text" href="#main">Главная</a></li>
+            <li><a id="hotel_link" class="menu_text" href="">Отели</a></li>
+            <li><a class="menu_text" href="">Акции</a></li>
+            <li><a class="menu_text" href="">Войти</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a class='logo' href="#main"><img class="logotip" src="/static/img/hotelhub_logo.png" alt="Logo"></a>
+      <div class="item"><a id="hotel_link" class="info" href="">Отели</a></div>
+      <div class="item"><a class="info" href="">Акции</a></div>
+      <div class="item"><a class="info" href="">Войти</a></div>
+    </div>
+    <div class="content">
+      <div class="online_curse">
+        <div class="text">
+          <h1>Тот, кто выбирает <span class="attention">ИДЕАЛЬНЫЙ ОТЕЛЬ</span>, открывает для себя мир
+            <span class="addition"><br>Платформа для онлайн бронирования отелей</span>
+        </h1>
+
+        <button class="roll">Каталог</button>
+        </div>
+        <img class="size" src="/static/img/hotel_information_slogan.png">
+      </div>
+    </div>
+    <div style="margin-top: 150px;" class="advantade">
+      <p class="advantade_info">Наш продукт — это полный набор возможностей  для <span class="attention">отдыха</span> в одном  приложении</p>
+      <div class="advantades">
+        <p class="support">Постоянная <br>поддержка</p>
+        <span class="support_plus">+</span>
+        <p class="courses">Широкий <br>выбор отелей</p>
+        <span class="courses_plus">+</span>
+        <p class="materials">Разнообразные <br>акции</p>
+        <span class="materials_plus">+</span>
+        <p class="pace">Индивидуальные <br>рекомендации</p>
+      </div>
+      <a id="popular_courses"></a>
+    </div>
+    <div class="popular_courses" >
+      <h1 style="margin-bottom: 50px;" class="popular_courses_text">Популярные Отели</h1>
+      <div class="famous_courses">
+        {% for i in range(3) %}
+            <button class="famous_course">
+                <div>
+                    <p class="famous_course_name">{{ hotels[i].name }}</p>
+                    <p class="famous_courses_text">{{ hotels[i].location }}</p>
+                </div>
+                <img class="famous_courses_img" src="/static/img/{{ hotels[i].id }}.png" alt="hotel{{ i }}">
+            </button>
+        {% endfor %}
+    </div>
+    <div class="famous_courses">
+        {% for i in range(3, 6) %}
+            <button class="famous_course">
+                <div>
+                    <p class="famous_course_name">{{ hotels[i].name }}</p>
+                    <p class="famous_courses_text">{{ hotels[i].location }}</p>
+                </div>
+                <img class="famous_courses_img" src="/static/img/{{ hotels[i].id }}.png" alt="hotel{{ i }}">
+            </button>
+        {% endfor %}
+    </div>
+    </div>
+    <div style="margin-top: 200px;" class="partners_stepics">
+      <h1 class="popular_courses_text">Наши партнёры</h1>
+      <h2 class="explanatory_text">Размещают Отели на HotelHub</h2>
+      <div class="partners">
+        <img class="partners_photo" src="/static/img/VKpng.png">
+
+        <img class="partners_photo2" src="/static/img/BSU.png">
+        <img class="partners_photo3" src="/static/img/telegram.png">
+      </div>
+      <div class="partners">
+
+        <img class="partners_photo1" src="/static/img/sunsung.png">
+
+        <img class="partners_photo5" src="/static/img/epam.png">
+      </div>
+      <a id="reviews"></a>
+    </div>
+  </div>
+  <a id="for_companies"></a>
+  <div class="footer">
+    <a href="#main"><img class="logo_footer" src="/static/img/hotelhub_logo.png"></a>
+    <div class="contacts">
+      <div class="contact">
+        <h2 class="conection">HotelHub</h2>
+        <ul class="conections">
+          <li><a class="text_style_info" href="javascript:void(0);">О нас</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">Прессе</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2 class="conection">Контакты</h2>
+        <ul class="conections">
+          <li"><a class="text_style_info" href="javascript:void(0);">Помощь</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">Команда</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">Контакты</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">Вакансии</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2 class="conection">Условия пользования</h2>
+        <ul class="conections">
+          <li><a class="text_style_info" href="javascript:void(0);">Условия использования</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2 class="conection">Мы в сети</h2>
+        <ul class="conections">
+          <li><a class="text_style_info" href="javascript:void(0);">Instagram</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">Telegram</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">Discord</a></li>
+          <li><a class="text_style_info" href="javascript:void(0);">ВКонтакте</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/static/js/index.js"></script>
+</html>

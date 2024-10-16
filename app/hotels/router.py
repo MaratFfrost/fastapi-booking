@@ -9,6 +9,6 @@ router = APIRouter(
 )
 
 @router.get("/all")
-#@cache(expire=60)
+@cache(expire=60)
 async def get_all_hotels():
   return await HotelsDAO.find_all()
