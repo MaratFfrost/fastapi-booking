@@ -4,11 +4,13 @@ from fastapi.staticfiles import StaticFiles
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
+
 from sqladmin import Admin
 
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.redis import RedisBackend
-from fastapi_cache.decorator import cache
+
+
 
 from redis import asyncio as aioredis
 
@@ -24,18 +26,12 @@ from app.database import engine
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
     redis = aioredis.from_url("redis://localhost", encoding="utf8")
     FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
-    try:
-        yield
-    finally:
-        await redis.close()
+    yield
 
 
 
 app = FastAPI(lifespan=lifespan)
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 
-app = FastAPI()
 
 
 app.mount("/static", StaticFiles(directory="app/static"), name="static")

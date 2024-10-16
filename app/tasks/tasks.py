@@ -7,6 +7,9 @@ from app.config import settings
 
 smt_host="smtp.gmail.com"
 
+def is_valid_email()->bool:
+  pass
+
 def get_email_template(code: int, mail:EmailStr):
   email = EmailMessage()
   email["Subject"] = "Подтверждение"

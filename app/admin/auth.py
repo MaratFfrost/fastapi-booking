@@ -25,11 +25,7 @@ class AdminAuth(AuthenticationBackend):
         if not admin:
           return RedirectResponse(request.url_for("admin:login"), status_code=status.HTTP_302_FOUND)
 
-        redis = FastAPICache.get_backend().redis
-        await redis.hset(f"current_admin:{admin.name}", mapping ={
-          "email": admin.email
-        })
-        await redis.expire(f"current_admin:{admin.name}", 600)
+
 
         access_token = create_access_token({"sub": str(admin.id)})
         request.session.update({"token": access_token})
