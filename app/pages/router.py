@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 
 from fastapi_cache.decorator import cache
 from app.hotels.dao import HotelsDAO
-from app.hotels.router import get_all_hotels
+from app.hotels.router import get_all_hotels, get_info_by_id
 
 
 
@@ -29,7 +29,14 @@ async def get_main_page(request: Request):
 @router.get("/hotels")
 async def get_all_hotels(request: Request,
   hotels = Depends(get_all_hotels)):
-  return templates.TemplateResponse("hotels.html", {"request": request, "hotels": hotels})
+
+  return templates.TemplateResponse("hotels.html", {"request": request, "hotels": hotels, })
+
+@router.get("/hotels/{id}")
+async def get_current_hotel(
+    request: Request,
+    info = Depends(get_info_by_id)
+):
+    return templates.TemplateResponse("hotel.html", {"request": request, "info": info})
 
 
-#@router.get()

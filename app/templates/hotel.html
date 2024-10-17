@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ info.name }}</title>
+    <link rel="stylesheet" href="/static/css/hotel.css">
+</head>
+<body>
+    <header class="header">
+        <a class='logo' href="/"><img class="logotip" src="/static/img/hotelhub_logo.png" alt="Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/hotels">Отели</a></li>
+                <li><a href="/promotions">Акции</a></li>
+                <li><a href="/login">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>{{ info.name }}</h1>
+        <img src="/static/img/{{ info.image_id }}.png" alt="{{ info.name }}" class="hotel-image">
+        <p>Расположение: {{ info.location }}</p>
+        <p>Количество комнат: {{ info.rooms_quantity }}</p>
+        <p>Услуги: {{ info.services | join(', ') }}</p>
+    </main>
+</body>
+</html>
