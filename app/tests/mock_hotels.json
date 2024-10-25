@@ -1,0 +1,32 @@
+[
+  {
+      "id": 1,
+      "name": "Grand Hotel",
+      "location": "New York",
+      "services": {
+          "wifi": ["free", "paid"],
+          "spa": ["available"]
+      },
+      "rooms_quantity": 100,
+      "image_id": 1
+  },
+  {
+      "id": 2,
+      "name": "Beach Resort",
+      "location": "California",
+      "services": {
+          "pool": ["outdoor", "heated"],
+          "gym": ["available"]
+      },
+      "rooms_quantity": 50,
+      "image_id": 2
+  },
+  {
+      "id": 3,
+      "name": "",
+      "location": "Florida",
+      "services": null,
+      "rooms_quantity": -5,
+      "image_id": null
+  }
+]

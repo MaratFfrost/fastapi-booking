@@ -1,0 +1,52 @@
+[
+  {
+      "id": 1,
+      "hotel_id": 1,
+      "name": "Deluxe Room",
+      "location": "1st Floor",
+      "price": 200,
+      "services": {
+          "amenities": ["TV", "AC"],
+          "breakfast": ["included"]
+      },
+      "description": "Spacious room with sea view.",
+      "quantity": 10,
+      "image_id": 3
+  },
+  {
+      "id": 2,
+      "hotel_id": 1,
+      "name": "Standard Room",
+      "location": "2nd Floor",
+      "price": 150,
+      "services": {
+          "amenities": ["TV"],
+          "breakfast": ["not included"]
+      },
+      "description": "Comfortable room for a pleasant stay.",
+      "quantity": 20,
+      "image_id": 4
+  },
+  {
+      "id": 3,
+      "hotel_id": 2,
+      "name": "Suite Room",
+      "location": "3rd Floor",
+      "price": 500,
+      "services": {},
+      "description": "Luxurious suite with a private balcony.",
+      "quantity": 2,
+      "image_id": 5
+  },
+  {
+      "id": 4,
+      "hotel_id": 1,
+      "name": "",
+      "location": "4th Floor",
+      "price": -100,
+      "services": null,
+      "description": "Invalid room description.",
+      "quantity": 0,
+      "image_id": null
+  }
+]

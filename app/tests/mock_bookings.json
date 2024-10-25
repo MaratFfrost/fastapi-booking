@@ -1,0 +1,26 @@
+[
+  {
+      "id": 1,
+      "room_id": 1,
+      "user_id": 1,
+      "date_from": "2024-10-01",
+      "date_to": "2024-10-10",
+      "price": 200
+  },
+  {
+      "id": 2,
+      "room_id": 2,
+      "user_id": 2,
+      "date_from": "2024-10-05",
+      "date_to": "2024-10-07",
+      "price": 150
+  },
+  {
+      "id": 3,
+      "room_id": 1,
+      "user_id": 1,
+      "date_from": "2024-10-15",
+      "date_to": "2024-10-20",
+      "price": 200
+  }
+]
