@@ -1,22 +1,17 @@
 [
   {
-      "id": 1,
+
       "email": "user1@example.com",
       "hashed_password": "hashedpassword1"
   },
   {
-      "id": 2,
+
       "email": "user2@example.com",
       "hashed_password": "hashedpassword2"
   },
   {
-      "id": 3,
-      "email": "invalid_email",
+
+      "email": "user3@example.com",
       "hashed_password": "hashedpassword3"
-  },
-  {
-      "id": 4,
-      "email": "user4@example.com",
-      "hashed_password": ""
   }
 ]

@@ -37,16 +37,5 @@
       "description": "Luxurious suite with a private balcony.",
       "quantity": 2,
       "image_id": 5
-  },
-  {
-      "id": 4,
-      "hotel_id": 1,
-      "name": "",
-      "location": "4th Floor",
-      "price": -100,
-      "services": null,
-      "description": "Invalid room description.",
-      "quantity": 0,
-      "image_id": null
   }
 ]

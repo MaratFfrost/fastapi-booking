@@ -1,10 +1,17 @@
-import asyncio
+from redis import asyncio as aioredis
 from datetime import datetime
 import json
+from fastapi_cache import FastAPICache
+import asyncio
 import pytest
 from sqlalchemy import insert
 from app.config import settings
 from app.database import Base, async_session_maker, engine
+
+from fastapi.testclient import TestClient
+from httpx import AsyncClient
+from fastapi_cache.backends.redis import RedisBackend
+from app.main import app as fastapi_app
 
 from app.bookings.models import Bookings
 from app.hotels.models import Hotels
@@ -19,6 +26,9 @@ async def prepare_database():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.drop_all)
         await conn.run_sync(Base.metadata.create_all)
+
+    redis = aioredis.from_url("redis://localhost", encoding="utf8")
+    FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
 
     def open_mock(model: str):
       with open(f"app/tests/mock_{model}.json") as file:
@@ -59,3 +69,15 @@ def event_loop(request):
    loop = asyncio.get_event_loop_policy().new_event_loop()
    yield loop
    loop.close()
+
+
+@pytest.fixture(scope="function")
+async def ac():
+  async with AsyncClient(app=fastapi_app, base_url="http://test") as ac:
+    yield ac
+
+
+@pytest.fixture(scope="function")
+async def session():
+   async with async_session_maker() as session:
+      yield session

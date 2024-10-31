@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     DB_PASS: str
     DATABASE_URL: str = ""
 
+    REDIS_HOST: str
+    REDIS_PORT: int
+
     KEY: str
     ALGORITM: str
 
@@ -42,7 +45,7 @@ class Settings(BaseSettings):
         return values
 
     model_config = ConfigDict(
-        env_file=".env", 
+        env_file=".env",
     )
 
 

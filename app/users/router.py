@@ -23,9 +23,7 @@ async def register_user(user_data: SUserAuth):
     if existing_user:
         raise HTTPException(status_code=400, detail="User already exists.")
 
-
     verification_code = random.randint(100000, 999999)
-
 
     redis = FastAPICache.get_backend().redis
     await redis.hset(f"verification:{verification_code}", mapping ={
@@ -34,11 +32,8 @@ async def register_user(user_data: SUserAuth):
         "code": verification_code
     })
     await redis.expire(f"verification:{verification_code}", 600)
-
-
     send_email(verification_code, user_data.email)
 
-    return {"message": "Verification email sent."}
 
 
 
@@ -48,17 +43,21 @@ async def activate_account(code: int):
 
     user_data_from_cache = await redis.hgetall(f"verification:{code}")
 
+    await redis.delete(f"verification:{code}")
+
     if not user_data_from_cache:
         raise HTTPException(status_code=404, detail="Verification data not found or expired.")
     data = [dict(user_data_from_cache)[i] for i in dict(user_data_from_cache)]
-    if code == int(data[2]):
+
+    existing_user = await UsersDAO.find_one_or_none(email=data[0].decode('utf-8'))
+
+    if existing_user:
+      raise HTTPException(status_code=400, detail="User already exists.")
+    elif code == int(data[2]):
       hashed_password = get_password_hash(data[1])
       await UsersDAO.add(email=data[0].decode('utf-8'), hashed_password = hashed_password)
-      return {'message': " user sucsesfully was added "}
     else:
        raise HTTPException(status_code=418)
-
-
 
 
 

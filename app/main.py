@@ -11,9 +11,9 @@ from fastapi_cache import FastAPICache
 from fastapi_cache.backends.redis import RedisBackend
 
 
-
 from redis import asyncio as aioredis
 
+from app.config import settings
 from app.admin.views import  SuperUsers, UserAdmin, HotelAdmin, RoomsAdmin, UserBokings
 from app.admin.auth import authentication_backend
 from app.pages.router import router as router_pages
@@ -22,16 +22,16 @@ from app.users.router import router as router_users
 from app.hotels.router import router as router_hotels
 from app.database import engine
 
+
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
-    redis = aioredis.from_url("redis://localhost", encoding="utf8")
-    FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
-    yield
+  redis = aioredis.from_url(f"redis://{settings.REDIS_HOST}:{settings.REDIS_PORT}", encoding="utf8")
+  FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
+  yield
 
 
 
 app = FastAPI(lifespan=lifespan)
-
 
 
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
