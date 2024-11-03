@@ -8,39 +8,37 @@
 </head>
 <body>
     <div class="container">
-      <header class="header">
-        <a class='logo' href="#main"><img class="logotip" src="/static/img/hotelhub_logo.png" alt="Logo"></a>
-        <nav class="nav">
-            <div class="item"><a id="hotel_link1" class="info" href="">Отели</a></div>
-            <div class="item"><a class="info" href="">Акции</a></div>
-            <div class="item"><a class="info" href="">Войти</a></div>
-        </nav>
-      </header>
+        <header class="header">
+            <a class='logo' href="#main"><img class="logotip" src="/static/img/hotelhub_logo.png" alt="Logo"></a>
+            <nav class="nav">
+                <div class="item"><a id="hotel_link1" class="info" href="">Отели</a></div>
+                <div class="item"><a class="info" href="">Акции</a></div>
+                <div class="item"><a class="info" href="">Войти</a></div>
+            </nav>
+        </header>
 
-      <h1 id="main">Список Отелей</h1>
+        <h1 id="main">Список Отелей</h1>
 
-      <div class="hotels">
-          {% for hotel in hotels %}
-              <a href="/hotels/{{ hotel.id }}" class="hotel-link">
-                  <div class="hotel-card">
-                      <img style="width: 70px;" src="/static/img/{{ hotel.image_id }}.png" alt="{{ hotel.name }}" class="hotel-image">
-                      <h2 class="hotel-name">Название: {{ hotel.name }}</h2>
-                      <p class="hotel-location">Место: {{ hotel.location }}</p>
-                      <p class="hotel-rooms">Количество комнат: {{ hotel.rooms_quantity }}</p>
-                      <p class="hotel-services">
-                        Услуги:
-                        {% set services = [] %}
-                        {% for key, value in hotel.services.items() %}
-                          {% if value %}
-                            {% set _ = services.append(key) %}
-                          {% endif %}
-                        {% endfor %}
-                        {{ services | join(', ') }}
-                      </p>
-                  </div>
-              </a>
-          {% endfor %}
-      </div>
+        <div class="hotels">
+            {% for hotel in hotels %}
+                <a href="/hotels/{{ hotel.id }}" class="hotel-link">
+                    <div class="hotel-card">
+                        <img style="width: 70px;" src="/static/img/{{ hotel.image_id }}.png" alt="{{ hotel.name }}" class="hotel-image">
+                        <h2 class="hotel-name">Название: {{ hotel.name }}</h2>
+                        <p class="hotel-location">Место: {{ hotel.location }}</p>
+                        <p class="hotel-rooms">Количество комнат: {{ hotel.rooms_quantity }}</p>
+                        <p class="hotel-services">
+                            Услуги:
+                            {% if hotel.services %}
+                                {{ hotel.services | join(', ') }}
+                            {% else %}
+                                Нет доступных услуг
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
     </div>
 
     <script src="/static/js/hotels.js"></script>
