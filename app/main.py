@@ -42,6 +42,7 @@ app.include_router(router_booking)
 app.include_router(router_hotels)
 
 
+
 admin = Admin(app, engine, authentication_backend=authentication_backend)
 
 admin.add_view(UserAdmin)

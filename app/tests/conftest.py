@@ -8,7 +8,8 @@ from sqlalchemy import insert
 from app.config import settings
 from app.database import Base, async_session_maker, engine
 
-from fastapi.testclient import TestClient
+from app.config import settings
+
 from httpx import AsyncClient
 from fastapi_cache.backends.redis import RedisBackend
 from app.main import app as fastapi_app
@@ -17,6 +18,7 @@ from app.bookings.models import Bookings
 from app.hotels.models import Hotels
 from app.rooms.models import Rooms
 from app.users.models import Users
+from app.admin.models import Admins
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -27,7 +29,7 @@ async def prepare_database():
         await conn.run_sync(Base.metadata.drop_all)
         await conn.run_sync(Base.metadata.create_all)
 
-    redis = aioredis.from_url("redis://localhost", encoding="utf8")
+    redis = aioredis.from_url(f"redis://{settings.REDIS_HOST}", encoding="utf8")
     FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
 
     def open_mock(model: str):
@@ -44,18 +46,20 @@ async def prepare_database():
                     pass
       return data
 
-
+    admins = convert_dates(open_mock("admins"))
     hotels = convert_dates(open_mock("hotels"))
     rooms = convert_dates(open_mock("rooms"))
     users = convert_dates(open_mock("users"))
     bookings = convert_dates(open_mock("bookings"))
 
     async with async_session_maker() as session:
+      add_admins = insert(Admins).values(admins)
       add_hotels = insert(Hotels).values(hotels)
       add_rooms = insert(Rooms).values(rooms)
       add_users = insert(Users).values(users)
       add_bookings = insert(Bookings).values(bookings)
 
+      await session.execute(add_admins)
       await session.execute(add_hotels)
       await session.execute(add_rooms)
       await session.execute(add_users)

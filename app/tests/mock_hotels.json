@@ -23,10 +23,10 @@
   },
   {
       "id": 3,
-      "name": "",
+      "name": "best hotel",
       "location": "Florida",
-      "services": null,
-      "rooms_quantity": -5,
-      "image_id": null
+      "services": {},
+      "rooms_quantity": 5,
+      "image_id": 3
   }
 ]

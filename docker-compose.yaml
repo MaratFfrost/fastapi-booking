@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
       - redis
-    command: ["sh", "-c", "alembic upgrade head && gunicorn app.main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000"]
+    command: ["/booking/docker/app.sh"]
     ports:
       - "7777:8000"
 
@@ -32,6 +32,6 @@ services:
     container_name: booking_celery
     depends_on:
       - redis
-    command: ["celery", "--app=app.tasks.celery:celery", "worker", "-l", "INFO"]
+    command: ["/booking/docker/celery.sh"]
     env_file:
     - .env-non-dev
